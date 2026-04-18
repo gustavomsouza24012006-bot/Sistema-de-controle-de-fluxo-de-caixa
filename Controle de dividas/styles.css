@@ -1,0 +1,161 @@
+:root {
+  --bg: #f4f7fb;
+  --card: #fffefe;
+  --text: #000000;
+  --muted: #000000;
+  --accent: #ececf3;
+  --accent-light: #d2e1ed;
+  --border: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: linear-gradient(180deg, #eef2ff 0%, #f8fafc 100%);
+  color: var(--text);
+}
+
+.hero {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  background: radial-gradient(circle at top, rgba(79, 70, 229, 0.16), transparent 45%);
+}
+
+.hero-content {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.05;
+}
+
+.hero p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 1.75rem;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.05);
+}
+
+.card-accent {
+  border-color: rgba(79, 70, 229, 0.18);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.35rem;
+}
+
+.card p {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+}
+
+label {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #f9fafb;
+  color: var(--text);
+}
+
+button {
+  margin-top: 0.25rem;
+  padding: 0.95rem 1rem;
+  border: none;
+  border-radius: 14px;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #4338ca;
+}
+
+.debt-status {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.data-block {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 18px;
+  background: var(--accent-light);
+  border: 1px solid rgba(80, 77, 138, 0.14);
+  display: grid;
+  gap: 0.5rem;
+}
+
+.data-block p {
+  margin: 0;
+}
+
+.toast {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  background: rgba(15, 23, 42, 0.9);
+  color: #fff;
+  padding: 1rem 1.25rem;
+  border-radius: 14px;
+  font-size: 0.95rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 720px) {
+  .hero {
+    padding: 2rem 1rem;
+  }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeto de Dívidas </title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Gerenciador de Dívidas</h1>
+      <p>Controle de dividas para não ficar com o nome sujo no Serasa </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Saídas</h2>
+      <form id="createDebtForm">
+        <label>Valor a guardar</label>
+        <input id="debtValue" type="number" min="0.01" step="0.01" placeholder="Ex: 1200,00" required />
+
+        <label>Produto/Serviço</label>
+        <input id="debtProduct" type="text" placeholder="Ex: Curso Java" required />
+
+        <label>Número de parcelas</label>
+        <input id="debtParcelas" type="number" min="1" step="1" placeholder="Ex: 12" required />
+
+        <button type="submit">Salvar saída</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Dividas</h2>
+    
+      <form id="payDebtForm">
+        <label>Selecionar dívida</label>
+        <select id="debtSelect"></select>
+
+        <label>Parcelas restantes</label>
+        <input id="remainingInstallments" type="text" value="-" readonly />
+
+        <label>Quantas parcelas pagar?</label>
+        <input id="payInstallments" type="number" min="1" step="1" placeholder="Digite o número de parcelas" />
+
+        <button type="submit">Pagar parcelas</button>
+      </form>
+      <div class="debt-status"><strong>Status:</strong> <span id="debtStatus">Selecione uma dívida</span></div>
+    </section>
+
+    <section class="card">
+      <h2>Entradas</h2>
+      <form id="incomeForm">
+        <label>Valor recebido</label>
+        <input id="incomeValue" type="number" min="0.01" step="0.01" placeholder="Ex: 500,00" required />
+
+        <label>Descrição</label>
+        <input id="incomeDesc" type="text" placeholder="Ex: Pagamento recebido" required />
+
+        <button type="submit">Registrar entrada</button>
+      </form>
+    </section>
+
+    <section class="card card-accent">
+      <h2>Controle de dados</h2>
+      <div id="debtList" class="data-block">Carregando dívidas...</div>
+      <div id="entryList" class="data-block">Carregando entradas...</div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+</body>
+</html>
