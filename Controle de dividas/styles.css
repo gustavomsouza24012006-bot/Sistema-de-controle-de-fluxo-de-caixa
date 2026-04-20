@@ -154,6 +154,11 @@ button:hover {
   transform: translateY(0);
 }
 
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (max-width: 720px) {
   .hero {
     padding: 2rem 1rem;
