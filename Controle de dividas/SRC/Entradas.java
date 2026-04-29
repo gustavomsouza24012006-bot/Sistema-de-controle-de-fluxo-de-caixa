@@ -1,54 +1,54 @@
 package SRC;
-import java.util.Scanner;
 
-public class Entradas extends Dividas {
-    Scanner scanner = new Scanner(System.in);
-    
-    public void Entradasdedinheiro() throws InterruptedException {
-        double entradas;
+public class Entradas extends Saidas {
+
+    protected double saldo = 0;
+
+    public void entradaDeDinheiro() {
+
         while (true) {
-            System.out.println("Digite os valores a receber");
+            System.out.println("\n--- ENTRADA DE DINHEIRO ---");
+            System.out.println("Digite o valor a receber:");
+
             if (!scanner.hasNextDouble()) {
-                System.err.println("Erro: digite um número válido.");
-                scanner.nextLine();
-                Thread.sleep(800);
+                System.out.println("Entrada inválida.");
+                scanner.next();
                 continue;
             }
 
-            entradas = scanner.nextDouble();
+            double valor = scanner.nextDouble();
             scanner.nextLine();
 
-            if (entradas <= 0) {
-                System.err.println("Erro: digite uma entrada válida");
-                Thread.sleep(800);
+            if (valor <= 0) {
+                System.out.println("O valor deve ser maior que zero.");
             } else {
-                System.out.println("Carregando....");
-                Thread.sleep(800);
-                System.out.println("Entrada de: " + entradas + " foi cadastrada com sucesso");
+                saldo += valor;
+
+                System.out.println("Entrada registrada com sucesso!");
+                System.out.println("Saldo atual: R$ " + saldo);
                 break;
             }
         }
     }
-    public void OrganizadordeEntradas() throws InterruptedException{
-        if (this.produtos == null || this.produtos.trim().isEmpty() || !this.produtos.matches("^[A-Za-zÀ-ÿ ]+$")) {
-            System.out.println("Não há produto/serviço válido cadastrado em armazenarparcelas para organizar.");
+
+    public void organizarEntradas() {
+
+        if (produto.isEmpty() || !produto.matches("^[A-Za-zÀ-ÿ ]+$")) {
+            System.out.println("Nenhum produto válido cadastrado.");
             return;
         }
-        System.out.println("Organizando entradas para: " + this.produtos);
-        Thread.sleep(800);
 
+        System.out.println("\nOrganizando entradas para: " + produto);
+        System.out.println("Saldo atual: R$ " + saldo);
         System.out.println("Entradas organizadas com sucesso!");
-
-        
     }
-public static void main(String[] args) throws InterruptedException {
-     Entradas obj = new Entradas();
-     
-        obj.armazenarparcelas();
-        obj.controledeDividas();
-        obj.Entradasdedinheiro();
-        obj.armazenarEntradas();
 
+    public static void main(String[] args) throws InterruptedException {
+
+        Entradas obj = new Entradas();
+
+        obj.entradaDeDinheiro();       
+        obj.armazenarParcelas();       
+        obj.organizarEntradas();       
+    }
 }
-}
-  
