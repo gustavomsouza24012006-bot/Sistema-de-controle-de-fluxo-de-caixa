@@ -1,4 +1,4 @@
-package SRC;
+package src;
 
 public class Login extends Cadastro {
     public void LoginUsuario() {
@@ -17,14 +17,15 @@ public class Login extends Cadastro {
                 break;
             }
         }
-
+         while (true) { 
         if (acesso) {
             System.out.println("Login realizado com sucesso!");
+            break;
         } else {
             System.out.println("Usuário ou senha inválidos.");
         }
     }
-
+    }
     public static void main(String[] args) throws InterruptedException {
         Login obj = new Login();
 

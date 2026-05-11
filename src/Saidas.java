@@ -1,4 +1,4 @@
-package SRC;
+package src;
 
 import java.util.Scanner;
 
@@ -81,6 +81,7 @@ public class Saidas {
         System.out.println("\nProduto cadastrado com sucesso!");
         System.out.println("Produto: " + produto);
         System.out.println("Parcelas: " + parcelas);
+        System.out.println("Valor valor total da divida: " + valorTotalDivida );
        
     }
 

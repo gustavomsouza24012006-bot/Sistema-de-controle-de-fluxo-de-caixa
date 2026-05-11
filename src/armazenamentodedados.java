@@ -1,4 +1,4 @@
-package SRC;
+package src;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,7 +36,6 @@ public class armazenamentodedados extends Entradas {
               return;
               }
                    System.out.println("\nMês selecionado: " + meses[mes - 1]);
-
           double valorParcela = entrada / parcelas;
 if (mes <= parcelas) {
 

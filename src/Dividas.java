@@ -1,4 +1,4 @@
-package SRC;
+package src;
 
 public class Dividas extends Saidas {
 
@@ -66,6 +66,8 @@ public class Dividas extends Saidas {
         System.out.println("Parcelas restantes: " + (parcelas - parcelasPagas));
         System.out.println("Valor restante: R$ " + valorRestanteFinal);
     }
+    
+    
 
     public static void main(String[] args) throws InterruptedException {
 

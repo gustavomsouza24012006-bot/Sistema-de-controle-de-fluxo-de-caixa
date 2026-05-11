@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contas a pagar - Controle de Dívidas</title>
+  <link rel="stylesheet" href="../../assets/styles.css" />
+  <link rel="stylesheet" href="../../assets/app/saidas.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Contas a pagar</h1>
+      <p>Registre e acompanhe as despesas do sistema.</p>
+      <button type="button" onclick="window.location.href='index.html'">Voltar ao Início</button>
+    </div>
+  </header>
+  <main class="container">
+    <section class="card">
+      <h2>Registrar saída</h2>
+      <form>
+        <label>Valor da saída</label>
+        <input type="number" min="0.01" step="0.01" placeholder="Ex: 150,00" />
+
+        <label>Categoria</label>
+        <input type="text" placeholder="Ex: Compras, contas" />
+
+        <label>Descrição</label>
+        <input type="text" placeholder="Ex: Pagamento de fornecedor" />
+
+        <button type="button">Salvar saída</button>
+      </form>
+    </section>
+    <section class="card">
+      <h2>Histórico de saídas</h2>
+      <div class="data-block">
+        <p>Nenhuma saída registrada ainda.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

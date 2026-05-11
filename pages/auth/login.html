@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Controle de Dívidas</title>
+  <link rel="stylesheet" href="../../assets/styles.css" />
+  <link rel="stylesheet" href="../../assets/auth/login.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Entrar na Conta</h1>
+      <p>Acesse o sistema de controle de dívidas com suas credenciais</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="form-wrapper">
+      <section class="card">
+        <h2>Login</h2>
+        <p>Preencha seus dados para acessar a plataforma</p>
+
+        <form id="loginForm" class="login-form">
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" placeholder="Sua senha" required />
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" style="grid-column: 1 / -1;">Entrar</button>
+          </div>
+        </form>
+
+        <div class="form-footer">
+          <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="toast" class="toast"></div>
+  <script src="../../src/Login.java"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-package SRC;
+package src;
 
 public class Entradas extends Saidas {
 
@@ -37,7 +37,15 @@ public class Entradas extends Saidas {
             System.out.println("Nenhum produto válido cadastrado.");
             return;
         }
-
+        String [] meses ={
+            "Janeiro", "Fevereiro", "Março", "Abril",
+            "Maio", "Junho", "Julho", "Agosto",
+            "Setembro", "Outubro", "Novembro", "Dezembro"};
+            System.out.println("\n --------Calendário ---------");
+            for(int i = 0; i < meses.length; i++){
+               System.out.println((i + 1) + " - " + meses[i]);
+               
+            }
         System.out.println("\nOrganizando entradas para: " + produto);
         System.out.println("Saldo atual: R$ " + saldo);
         System.out.println("Entradas organizadas com sucesso!");
