@@ -37,7 +37,7 @@ public class armazenamentodedados extends Entradas {
               }
                    System.out.println("\nMês selecionado: " + meses[mes - 1]);
           double valorParcela = entrada / parcelas;
-if (mes <= parcelas) {
+          if (mes <= parcelas) {
 
     int parcelasRestantes = parcelas - mes;
 
@@ -55,6 +55,9 @@ private void controledeDividas() {
     throw new UnsupportedOperationException("Unimplemented method 'controledeDividas'");
   }
 
+private void dashbord(gastosTotais, gastosMensais) {
+  gas
+}
 public static void main(String[] args) throws InterruptedException {
   armazenamentodedados obj= new armazenamentodedados();
   obj.armazenardados();
